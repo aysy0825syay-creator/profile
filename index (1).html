@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>とまっち</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --card: #FFFFFF;
+    --ink: #21221F;
+    --ink-soft: #757468;
+    --accent: #2F2E2B;
+    --border: rgba(33,34,31,0.10);
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#17181A; --card:#1F2022; --ink:#F3F2EE; --ink-soft:#9A9A92; --accent:#F3F2EE; --border:rgba(255,255,255,0.10); }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Inter", "Zen Maru Gothic", sans-serif;
+    min-height: 100%; display: flex; align-items: center; justify-content: center;
+  }
+  .card {
+    width: 100%; max-width: 380px; margin: 40px 20px; padding: 40px 28px;
+    text-align: center;
+  }
+  .avatar {
+    width: 86px; height: 86px; margin: 0 auto 18px; border-radius: 50%;
+    background: var(--card); border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .avatar svg { width: 40px; height: 40px; }
+  h1 {
+    font-family: "Zen Maru Gothic", sans-serif; font-weight: 700; font-size: 1.5rem;
+    margin: 0 0 6px;
+  }
+  p.bio { font-size: .92rem; color: var(--ink-soft); margin: 0 0 34px; line-height: 1.7; }
+
+  .links { display: grid; gap: 12px; }
+  .link {
+    display: flex; align-items: center; gap: 12px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 15px 18px; text-decoration: none; color: var(--ink);
+    transition: transform .12s ease, border-color .12s ease;
+    text-align: left;
+  }
+  .link:active { transform: scale(0.98); }
+  .link .ico { width: 20px; height: 20px; flex-shrink: 0; color: var(--ink-soft); }
+  .link .txt { flex: 1; }
+  .link .txt .t { font-weight: 600; font-size: .92rem; }
+  .link .txt .s { font-size: .74rem; color: var(--ink-soft); margin-top: 1px; }
+  .link .arrow { color: var(--ink-soft); font-size: .9rem; }
+
+  .music-box {
+    margin-top: 28px; text-align: left;
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px;
+  }
+  .music-label { font-size: .72rem; color: var(--ink-soft); margin-bottom: 2px; }
+  .music-title { font-size: .92rem; font-weight: 600; margin-bottom: 12px; }
+  .video-frame { position: relative; width: 100%; padding-top: 56.25%; border-radius: 10px; overflow: hidden; background: #000; }
+  .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  footer { margin-top: 36px; font-size: .72rem; color: var(--ink-soft); opacity: .7; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="avatar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+  </div>
+  <h1>とまっち</h1>
+  <p class="bio">サーバー運営・Bot制作。</p>
+
+  <div class="links">
+    <a class="link" href="https://discord.gg/qjmATeVFfq" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 5.4C18.8 4.7 17.2 4.2 15.6 4c-.2.4-.4.8-.6 1.3-1.7-.3-3.4-.3-5.1 0-.1-.5-.3-.9-.6-1.3-1.6.2-3.2.7-4.7 1.4C2 9 1.3 12.5 1.6 16c1.8 1.3 3.5 2.1 5.2 2.6.4-.6.8-1.2 1.1-1.9-.6-.2-1.2-.5-1.7-.9.1-.1.3-.2.4-.3 3.3 1.5 6.9 1.5 10.2 0 .1.1.3.2.4.3-.5.3-1.1.6-1.7.9.3.7.7 1.3 1.1 1.9 1.7-.5 3.4-1.3 5.2-2.6.4-4.1-.7-7.6-2.5-10.6ZM8.7 13.8c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Zm6.6 0c-.9 0-1.7-.9-1.7-2s.7-2 1.7-2 1.7.9 1.7 2-.8 2-1.7 2Z"/></svg>
+      <div class="txt"><div class="t">Discord</div><div class="s">参加する</div></div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a class="link" href="https://discord.com/oauth2/authorize?client_id=1552273300405882970&permissions=8&integration_type=0&scope=bot+applications.commands" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+      <div class="txt"><div class="t">VexaBot</div><div class="s">追加する</div></div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a class="link" href="https://aysy0825syay-creator.github.io/geme/" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg>
+      <div class="txt"><div class="t">Geme</div><div class="s">遊ぶ</div></div>
+      <div class="arrow">→</div>
+    </a>
+
+    <a class="link" href="https://www.tiktok.com/@aysy06031dx" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.2c-.8-.7-1.3-1.7-1.4-2.9h-3.1v13.3c0 1.5-1.2 2.7-2.7 2.7-1.5 0-2.7-1.2-2.7-2.7 0-1.5 1.2-2.7 2.7-2.7.3 0 .6 0 .8.1V9.7c-.3 0-.5-.1-.8-.1-3.2 0-5.8 2.6-5.8 5.8s2.6 5.8 5.8 5.8 5.8-2.6 5.8-5.8V8.1c1.2.9 2.7 1.4 4.3 1.4V6.4c-1 0-1.9-.3-2.9-1.2Z"/></svg>
+      <div class="txt"><div class="t">TikTok</div><div class="s">見る</div></div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+  <div class="music-box">
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/Y4nEEZwckuU"
+        title="YOASOBI「群青」Official Music Video"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <footer>とまっち</footer>
+</div>
+
+</body>
+</html>
